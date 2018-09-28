@@ -3,8 +3,12 @@
     <aside class="col-md-4">
       <%= form_for(@tasklist) do |f| %>
         <div class="form-group">
+          <%= f.label :status%>
+          <%= f.text_area :status,class: 'form-control', rows: 1 %>
+          <%= f.label :content %>
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
+        
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
       <% end %>
     </aside>
